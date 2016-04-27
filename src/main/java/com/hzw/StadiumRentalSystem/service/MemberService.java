@@ -25,4 +25,18 @@ public interface MemberService {
 	 * @return
 	 */
 	List<Member> findAll();
+	
+	/**
+	 * 获取页面分页显示数据
+	 * @param start
+	 * @param number
+	 * @return
+	 */
+	List<Member> getPagingList(int start,int number);
+	
+	/**
+	 * 获取数据库中数据数量
+	 * @return
+	 */
+	Integer getStadiumCount();
 }

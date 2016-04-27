@@ -1,4 +1,3 @@
-<%@page import="com.hzw.StadiumRentalSystem.entity.Operator"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
@@ -85,7 +84,7 @@
 		});
 
 		$(".addOpBtn").click(function() {
-			submitForm();
+			submitOperatorFrom();
 		});
 		
 		$('#role').combobox({    
@@ -96,7 +95,7 @@
 		
 	});
 	
-	function submitForm(){
+	function submitOperatorFrom(){
 		$('#operatorfrom').form('submit', {
 			url : 'operator!addOperator.action',
 			onSubmit : function() {

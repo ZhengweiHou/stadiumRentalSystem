@@ -1,6 +1,5 @@
 package com.hzw.StadiumRentalSystem.utils;
 
-import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 
@@ -73,4 +72,8 @@ public class StadiumTimeUtil {
 			return false;
 	}
 
+	public static void main(String[] args) {
+		System.out.println(StadiumTimeUtil.bitsIsRepeat(16, 8));//10000  1000
+		System.out.println(StadiumTimeUtil.bitsIsRepeat(25, 5));//11001  101
+	}
 }

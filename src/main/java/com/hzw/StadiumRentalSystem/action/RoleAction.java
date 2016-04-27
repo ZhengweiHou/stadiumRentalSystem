@@ -1,9 +1,7 @@
 package com.hzw.StadiumRentalSystem.action;
 
 import java.io.IOException;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 import javax.servlet.http.HttpServletResponse;
 
@@ -59,7 +57,10 @@ public class RoleAction extends ActionSupport {
 //		jsonMap.put("roles", listRoles);// rows键 存放每页记录 list
 //		result = new JSONObject(jsonMap);
 		// result=JSONObject.fromObject(CommonUtil.getJsonNotNull(jsonMap));
+		 
 		JSONArray roles = new JSONArray(listRoles);
+//		JSONArray roles = JSONArray.fromObject(listRoles);
+		 
 //		System.out.println(result.getString("roles"));
 //		String rolesJson = result.getString("roles");
 		response.getWriter().write(roles.toString());

@@ -5,22 +5,15 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import javax.servlet.http.HttpServletResponse;
-
-import org.apache.struts2.ServletActionContext;
 import org.apache.struts2.convention.annotation.Action;
 import org.apache.struts2.convention.annotation.Result;
 import org.apache.struts2.convention.annotation.Results;
-import org.json.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import com.hzw.StadiumRentalSystem.entity.Operator;
-import com.hzw.StadiumRentalSystem.entity.Role;
 import com.hzw.StadiumRentalSystem.service.OperatorService;
 import com.hzw.StadiumRentalSystem.service.RoleService;
 import com.hzw.StadiumRentalSystem.utils.MD5;
-import com.opensymphony.xwork2.ActionContext;
-import com.opensymphony.xwork2.ActionSupport;
 
 /**
  * 操作员Action

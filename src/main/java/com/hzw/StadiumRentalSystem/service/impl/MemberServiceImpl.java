@@ -25,5 +25,15 @@ public class MemberServiceImpl implements MemberService {
 		return memberDao.findAll();
 	}
 
+	@Override
+	public List<Member> getPagingList(int start, int number) {
+		return memberDao.getPagingList(start, number);
+	}
+
+	@Override
+	public Integer getStadiumCount() {
+		return memberDao.getCount();
+	}
+
 	
 }

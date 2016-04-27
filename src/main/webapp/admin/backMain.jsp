@@ -57,6 +57,10 @@
 						onclick="addTab('stadiumManager')"
 						data-options="toggle:true,group:'g1',plain:true">运动场管理</a></li>
 					<li style="width: 90"><a href="#" class="easyui-linkbutton"
+						onclick="addTab('memberManager')"
+						data-options="toggle:true,group:'g1',plain:true">会员管理</a></li>
+					
+					<li style="width: 90"><a href="#" class="easyui-linkbutton"
 						data-options="toggle:true,group:'g1',plain:true,text:'hahaaah'"></a>
 					</li>
 				</ul>

@@ -1,4 +1,3 @@
-<%@page import="com.hzw.StadiumRentalSystem.entity.Operator"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
@@ -67,7 +66,7 @@
 
 		</table>
 		<div style="text-align: left; padding: 5px">
-			<a href="javascript:void(0)" class="easyui-linkbutton addOpBtn">确认添加</a>
+			<a href="javascript:void(0)" class="easyui-linkbutton addStadiumBtn">确认添加</a>
 		</div>
 	</form>
 
@@ -76,13 +75,13 @@
 	<script type="text/javascript">
 		$(function() {
 			
-			$(".addOpBtn").click(function() {
-			 	submitForm(); 
+			$(".addStadiumBtn").click(function() {
+				submitStadiumFrom(); 
 			});
 
 		});
 
-		function submitForm() {
+		function submitStadiumFrom() {
 			$('#stadiumfrom').form('submit', {
 				url : 'stadium!addStadium.action',
 				onSubmit : function() {

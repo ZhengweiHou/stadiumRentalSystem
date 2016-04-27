@@ -16,6 +16,7 @@ import com.hzw.StadiumRentalSystem.entity.Operator;
 import com.hzw.StadiumRentalSystem.entity.Role;
 import com.hzw.StadiumRentalSystem.service.OperatorService;
 import com.hzw.StadiumRentalSystem.service.RoleService;
+import com.hzw.StadiumRentalSystem.utils.MD5;
 
 /**
  * 操作员测试
@@ -41,8 +42,8 @@ public class TestOperatorService {
 		Role  role = new Role();
 		role.setId(1);
 		role.setName("管理员");
-		operator.setName("张三");
-		operator.setPassword("1234");
+		operator.setName("hzw");
+		operator.setPassword(MD5.MD5("123456"));
 		operator.setRole(role);
 		operatorService.save(operator);
 //		operatorDao.save(operator);

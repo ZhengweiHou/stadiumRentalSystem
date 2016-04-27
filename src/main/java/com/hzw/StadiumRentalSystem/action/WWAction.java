@@ -65,7 +65,11 @@ public abstract class WWAction extends ActionSupport{
 	
 	
 	public void writerToJsp(Map<?, ?> data) throws IOException{
+//		result = JSONObject.fromObject(data);
+//		String results = JsonMapper.obj2json(data);
+//		result = new JSONObject((Map<String, Object>)data);
 		result = new JSONObject(data);
+//		response.getWriter().write(result.toString());
 		response.getWriter().write(result.toString());
 	}
 	

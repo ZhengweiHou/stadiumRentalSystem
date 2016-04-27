@@ -10,7 +10,8 @@ public class PageStore {
 		pages.put("personalCenter", new BackPage("personalCenter", "个人中心", "/admin/backPage/personalCenter.jsp"));
 		pages.put("operatorManager", new BackPage("operatorManager", "操作员管理", "/admin/backPage/operatorManager.jsp"));
 		pages.put("stadiumManager", new BackPage("stadiumManager", "运动场管理", "/admin/backPage/stadiumManager.jsp"));
-		
+		pages.put("memberManager", new BackPage("memberManager", "会员管理", "/admin/backPage/memberManager.jsp"));
+
 		
 		
 		}

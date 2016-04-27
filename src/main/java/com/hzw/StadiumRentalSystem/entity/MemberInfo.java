@@ -38,7 +38,7 @@ public class MemberInfo implements Serializable {
 
 	private String tel;
 
-	private Member member;
+//	private Member member;
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
@@ -87,17 +87,21 @@ public class MemberInfo implements Serializable {
 		this.tel = tel;
 	}
 
-	@OneToOne(cascade = CascadeType.ALL)
-//	@JoinColumn(name = "account", referencedColumnName = "account")
-	// @JoinColumn(name = "account", referencedColumnName = "account", unique =
-	// true,insertable=false,updatable=false)
-	public Member getMember() {
-		return member;
-	}
-
-	public void setMember(Member member) {
-		this.member = member;
-	}
+//	@OneToOne(cascade = CascadeType.ALL)
+////	@JoinColumn(name = "account", referencedColumnName = "account")
+//	// @JoinColumn(name = "account", referencedColumnName = "account", unique =
+//	// true,insertable=false,updatable=false)
+//	public Member getMember() {     
+//		return member;
+//	}
+//
+//	public void setMember(Member member) {
+//		this.member = member;
+////		this.member = new Member();
+////		this.member.setId(member.getId());
+////		this.member.setAccount(member.getAccount());
+////		this.member.setPassword(member.getPassword());
+//	}
 
 	public static long getSerialversionuid() {
 		return serialVersionUID;

@@ -34,11 +34,14 @@ public class Member implements Serializable {
 
 	private String password; // 密码
 
+//	private String tel;
+
 	private MemberInfo memberInfo; // 账户信息
 
 	
 	
 	public Member() {
+		super();
 	}
 
 	@Id
@@ -70,18 +73,39 @@ public class Member implements Serializable {
 		this.password = password;
 	}
 
-	@OneToOne(mappedBy = "member", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+//	@OneToOne(mappedBy = "member", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+//	public MemberInfo getMemberInfo() {
+//		return memberInfo;
+//	}
+//
+//	public void setMemberInfo(MemberInfo memberInfo) {
+//
+//		this.memberInfo = memberInfo;
+////		this.tel = memberInfo.getTel();
+//		this.memberInfo.setMember(this);
+//	}
+	
+//	@OneToOne(targetEntity = MemberInfo.class, cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+	@OneToOne(cascade = CascadeType.ALL)
 	public MemberInfo getMemberInfo() {
 		return memberInfo;
 	}
 
 	public void setMemberInfo(MemberInfo memberInfo) {
+
 		this.memberInfo = memberInfo;
-		this.memberInfo.setMember(this);
 	}
 
 	public static long getSerialversionuid() {
 		return serialVersionUID;
 	}
+	
+//	public String getTel() {
+//		return tel;
+//	}
+
+//	public void setTel(String tel) {
+//		this.tel = tel;
+//	}
 
 }

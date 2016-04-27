@@ -31,11 +31,11 @@ public class TestMemberService {
 //		memberinfo.setId(1);
 //		memberinfo.setMail("qe1qee");
 //		memberinfo.setName("q1wee");
-		memberinfo.setTel("111111tel");
+		memberinfo.setTel("222111tel");
 //		memberinfo.setBirthday(new Timestamp(1929, 12, 12, 12, 11, 11, 11));
 //		memberinfo.setMember(member);
 //		member.setId(1);
-		member.setAccount("account1");
+		member.setAccount("account12");
 		member.setPassword("passw1ord");
 		member.setMemberInfo(memberinfo);
 		memberService.save(member);

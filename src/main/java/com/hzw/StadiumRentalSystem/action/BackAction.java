@@ -75,6 +75,7 @@ public class BackAction extends ActionSupport {
 		}
 
 		JSONObject jsonObject = new JSONObject(data);
+//		JSONObject jsonObject = JSONObject.fromObject(data);
 		response.getWriter().write(jsonObject.toString());
 	}
 
