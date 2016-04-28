@@ -9,7 +9,6 @@
 	String basePath = request.getScheme() + "://"
 			+ request.getServerName() + ":" + request.getServerPort()
 			+ bas + "/";
-
 %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
@@ -35,16 +34,46 @@
 <body class="easyui-layout" onload="pageLoad">
 	<form id="stadiumfrom" class="easyui-form" method="post"
 		data-options="novalidate:false">
-		<input type="text" value="${param.id}" name="id" style="display:none;"></input>
+		<input type="text" value="${param.id}" name="id"
+			style="display: none;"></input>
 		<table cellpadding="5">
 			<tr>
 				<td>id:</td>
-				<td><input class="easyui-textbox" type="text" value="${param.id}"
-					name="stadiumNumber" data-options="required:true" readonly="readonly"></input></td>
+				<td><input id="id" class="easyui-textbox" type="text"
+					name="stadiumNumber" readonly="readonly"></input></td>
+			</tr>
+			<tr>
+				<td>账户:</td>
+				<td><input id="account" class="easyui-textbox" type="text"
+					name="account" readonly="readonly"></input></td>
+			</tr>
+			<tr>
+				<td>姓名:</td>
+				<td><input id="name" class="easyui-textbox" type="text"
+					name="name" readonly="readonly"></input></td>
+			</tr>
+			<tr>
+				<td>电话:</td>
+			<td><input id="tel" class="easyui-textbox" type="text"
+				name="tel" readonly="readonly"></input></td>
+			</tr>
+			<tr>
+				
+			<td>生日:</td>
+			<td><input id="birthday" class="easyui-datebox" type="text"
+				name="birthday" readonly="readonly"></input></td>
+			</tr>
+			<tr><td>邮箱
+			:</td>
+			<td><input id="mail" class="easyui-textbox" type="text"
+				name="mail" readonly="readonly"></input></td>
+
 			</tr>
 			
 
 
+
+		
 		</table>
 		<div style="text-align: left; padding: 5px">
 			<a href="javascript:void(0)" class="easyui-linkbutton updateBtn">确认修改</a>
@@ -65,7 +94,28 @@
 	            },
 	            dataType : "json",//设置需要返回的数据类型
 	            success : function(data) {
-					alert(data.id);
+	            	/* $("#id").val(data.id);
+	            	$("#account").val(data.account);
+	            	$("#birthday").val(data.memberInfo.birthday);
+	            	$("#mail").val(data.memberInfo.mail);
+	            	$("#name").val(data.memberInfo.name);
+	            	$("#tel").val(data.memberInfo.tel); */
+	            	
+	            	/* $("#id").setValue(data.id);
+	            	$("#account").attr("value","data.account");
+	            	$("#tel").attr("value",data.memberInfo.tel); */
+	            	
+	            	$("#id").textbox("setValue", data.id);
+	            	$("#account").textbox("setValue", data.account);
+	            	$("#birthday").datebox("setValue", data.memberInfo.birthday);
+	            	$("#mail").textbox("setValue", data.memberInfo.mail);
+	            	$("#name").textbox("setValue", data.memberInfo.name);
+	            	$("#tel").textbox("setValue", data.memberInfo.tel);
+	            	/* $("#startDate").datebox("setValue", ""); */
+	            	
+	            	
+	            	//alert(data.id+data.account+data.memberInfo.birthday+data.memberInfo.mail+data.memberInfo.name+data.memberInfo.tel);
+	            	
 				}
 			}); 
 			

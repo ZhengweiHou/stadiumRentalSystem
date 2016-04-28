@@ -8,6 +8,7 @@ import java.util.Map;
 
 import org.apache.struts2.ServletActionContext;
 import org.apache.struts2.convention.annotation.Action;
+import org.json.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import com.hzw.StadiumRentalSystem.entity.Member;
@@ -92,10 +93,10 @@ public class MemberAction extends WWAction {
 		
 	}
 
-	public Member gitMemberInfo(){
-		Member members = new Member(); 
-		members.setId(id);
-		return members;	
+	public void gitMemberInfo() throws IOException{
+		Member members = memberService.findMemberById(id);
+		result = new JSONObject(members);
+		response.getWriter().write(result.toString());
 	}
 	
 	

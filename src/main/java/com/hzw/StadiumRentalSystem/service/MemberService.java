@@ -39,4 +39,11 @@ public interface MemberService {
 	 * @return
 	 */
 	Integer getStadiumCount();
+	
+	/**
+	 * 获取指定id的用户
+	 * @param id
+	 * @return
+	 */
+	Member findMemberById(Integer id);
 }
