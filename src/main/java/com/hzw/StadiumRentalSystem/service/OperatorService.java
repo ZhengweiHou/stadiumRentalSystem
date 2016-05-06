@@ -73,5 +73,5 @@ public interface OperatorService {
 	 * @param id
 	 * @return
 	 */
-	public Operator delById(int id);
+	public void delById(int id);
 }

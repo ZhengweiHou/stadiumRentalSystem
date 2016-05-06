@@ -79,8 +79,8 @@ public class OperatorServiceImpl implements OperatorService {
 //	}
 
 	@Override
-	public Operator delById(int id) {
+	public void delById(int id) {
 		operatorDao.delete(id);
-		return null;
+
 	}
 }

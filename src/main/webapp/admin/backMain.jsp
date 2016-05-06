@@ -60,8 +60,8 @@
 						onclick="addTab('memberManager')"
 						data-options="toggle:true,group:'g1',plain:true">会员管理</a></li>
 					<li style="width: 90"><a href="#" class="easyui-linkbutton"
-						data-options="toggle:true,group:'g1',plain:true,text:'hahaaah'"></a>
-					</li>
+						onclick="addTab('newsManager')"
+						data-options="toggle:true,group:'g1',plain:true">公告管理</a></li>
 				</ul>
 
 			</div>

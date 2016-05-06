@@ -107,21 +107,20 @@
 												,method:'get'
 												,autoRowHeight:true
 												,fitColumns:false
+												,nowrap:false
 												">
 												<thead>
 													<tr>
 														<th data-options="field:'title'">标题</th>
-														<th data-options="field:'content',align:'left'" f>内容
+														<th data-options="field:'content',align:'left'" formatter="formatNewsContent">内容
 
 														</th>
 													</tr>
 												</thead>
 											</table>
-
-											<!-- <table id="pg" class="easyui-propertygrid"
-												style="width: 300px"
-												data-options="url:'operator!showOperators.action',showGroup:false,scrollbarSize:0"></table> -->
-										</marquee></td>
+											
+										</marquee>
+										</td>
 								</tr>
 							</tbody>
 							<!--*******************************滚动公告结束*******************************-->
@@ -201,7 +200,8 @@
 	});
 
 	function formatNewsContent(value) {
-		return $("#newsContent");
+		return "<div style=\"widtn:200px;display:block;word-break:break-all;word-wrap:break-word\">"+value+"</div>"
+		/* return $("#newsContent"); */
 		/* return $("#newsContent").textbox("setValue", value); */
 		/* return"<input class='easyui-textbox' data-options='multiline:true' value="+"松松松松松松松松松松松松松松松松松松松松松松松松松松松松松松送送从送送送送送送送送送送送送送送送送送送"+" style='width:100px;'>" */
 		/* return value.content; */
