@@ -10,7 +10,7 @@
 			+ request.getServerName() + ":" + request.getServerPort()
 			+ bas + "/";
 %>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!DOCTYPE html>
 <html>
 <head>
 <base href="<%=bas%>">
@@ -24,7 +24,7 @@
 	href="<%=bas%>/easyui/themes/color.css">
 <link rel="stylesheet" type="text/css"
 	href="<%=bas%>/easyui/demo/demo.css">
-<script type="text/javascript" src="<%=bas%>/js/jquery-1.9.0.js"></script>
+<script type="text/javascript" src="<%=bas%>/js/jquery-1.11.3.js"></script>
 <script type="text/javascript"
 	src="<%=bas%>/easyui/jquery.easyui.min.js"></script>
 <script type="text/javascript"

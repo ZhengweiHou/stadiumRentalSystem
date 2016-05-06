@@ -24,7 +24,7 @@
 	href="<%=bas%>/easyui/themes/color.css">
 <link rel="stylesheet" type="text/css"
 	href="<%=bas%>/easyui/demo/demo.css">
-<script type="text/javascript" src="<%=bas%>/js/jquery-1.9.0.js"></script>
+<script type="text/javascript" src="<%=bas%>/js/jquery-1.11.3.js"></script>
 <script type="text/javascript"
 	src="<%=bas%>/easyui/jquery.easyui.min.js"></script>
 <script type="text/javascript"
@@ -59,7 +59,6 @@
 					<li style="width: 90"><a href="#" class="easyui-linkbutton"
 						onclick="addTab('memberManager')"
 						data-options="toggle:true,group:'g1',plain:true">会员管理</a></li>
-					
 					<li style="width: 90"><a href="#" class="easyui-linkbutton"
 						data-options="toggle:true,group:'g1',plain:true,text:'hahaaah'"></a>
 					</li>
@@ -77,8 +76,18 @@
 
 	<!-- 页脚 -->
 	<div data-options="region:'south',border:false"
-		style="height: 50px; background: #A9FACD; padding: 10px;">south
-		region</div>
+		style="height: 50px; background: #A9FACD; padding: 10px;">
+		<table id=footer cellSpacing=0 cellPadding=0 width="100%" align=center
+			border=0>
+			<tbody>
+				<tr>
+					<td align=middle>
+						<div align=center>Copyright@2007-2016 stadiumRentalSystem</div>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
 
 	<!-- 主显示区 -->
 	<div data-options="region:'center'">
