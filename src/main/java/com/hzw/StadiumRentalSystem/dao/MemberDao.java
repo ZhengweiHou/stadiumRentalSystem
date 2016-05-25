@@ -13,4 +13,11 @@ public interface MemberDao extends GenericDao<Member, Integer>{
 	 */
 	public List<Member> getPagingList(int start, int number);
 	
+	
+	/**
+	 * 根据账户获取用户
+	 * @param account
+	 * @return
+	 */
+	public Member getByAccount(String account);
 }

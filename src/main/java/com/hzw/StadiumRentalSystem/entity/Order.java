@@ -47,6 +47,18 @@ public class Order implements Serializable {
 	
 	private String state;// 订单状态
 	
+	private double rebate=1;// 折扣
+	
+	private double price;// 单价/时
+	
+	private double total;// 总价
+	
+	private Integer totalTime;// 总时间
+	
+
+
+
+
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	@Column(name = "id", nullable = false, unique = true)
@@ -101,6 +113,11 @@ public class Order implements Serializable {
 		return total;
 	}
 
+	@Column(name = "totalTime", unique = false, nullable = false)
+	public Integer getTotalTime() {
+		return totalTime;
+	}
+	
 	public void setId(Integer id) {
 		this.id = id;
 	}
@@ -140,11 +157,10 @@ public class Order implements Serializable {
 	public void setTotal(double total) {
 		this.total = total;
 	}
+	
+	public void setTotalTime(Integer totalTime) {
+		this.totalTime = totalTime;
+	}
 
-	private double rebate=1;// 折扣
-	
-	private double price;// 单价/时
-	
-	private double total;// 总价
 	
 }

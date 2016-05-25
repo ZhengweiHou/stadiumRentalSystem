@@ -31,13 +31,19 @@ public class MemberServiceImpl implements MemberService {
 	}
 
 	@Override
-	public Integer getStadiumCount() {
+	public Integer getMemberCount() {
 		return memberDao.getCount();
 	}
 
 	@Override
 	public Member findMemberById(Integer id) {
 		return memberDao.get(id);
+	}
+
+	@Override
+	public Member findMemberByAccount(String account) {
+		// TODO Auto-generated method stub
+		return memberDao.getByAccount(account);
 	}
 
 	

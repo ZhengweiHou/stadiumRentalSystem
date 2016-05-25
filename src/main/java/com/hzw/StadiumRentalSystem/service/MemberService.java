@@ -38,7 +38,7 @@ public interface MemberService {
 	 * 获取数据库中数据数量
 	 * @return
 	 */
-	Integer getStadiumCount();
+	Integer getMemberCount();
 	
 	/**
 	 * 获取指定id的用户
@@ -46,4 +46,11 @@ public interface MemberService {
 	 * @return
 	 */
 	Member findMemberById(Integer id);
+	
+	/**
+	 * 获取指定账户的用户
+	 * @param account
+	 * @return
+	 */
+	Member findMemberByAccount(String account);
 }

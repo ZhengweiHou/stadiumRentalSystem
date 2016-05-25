@@ -61,7 +61,7 @@
 				
 			<td>生日:</td>
 			<td><input id="birthday" class="easyui-datebox" type="text"
-				name="birthday" readonly="readonly"></input></td>
+				name="birthday" ></input></td>
 			</tr>
 			<tr><td>邮箱
 			:</td>

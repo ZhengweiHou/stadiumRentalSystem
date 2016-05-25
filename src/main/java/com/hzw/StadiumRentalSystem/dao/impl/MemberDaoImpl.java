@@ -5,6 +5,7 @@ import java.util.List;
 import org.hibernate.Criteria;
 import org.hibernate.Query;
 import org.hibernate.criterion.Projections;
+import org.hibernate.criterion.Restrictions;
 import org.springframework.stereotype.Repository;
 
 import com.hzw.StadiumRentalSystem.dao.MemberDao;
@@ -64,6 +65,22 @@ public class MemberDaoImpl extends BaseDao implements MemberDao {
 //		q.setShort(name, val);// TODO 排序
 		List<Member> members =q.list();
 		return members;
+	}
+
+	@Override
+	public Member getByAccount(String account) {
+		Criteria c=this.session().createCriteria(Member.class);
+		   c.add(Restrictions.eq("account",account));//eq是等于，gt是大于，lt是小于,or是或
+		   List<Member> members = c.list();
+		   if(members==null||members.size()<1){
+			   return null;
+					  
+		   }else{
+			   for (Member member : members) {
+				return member;
+			}
+		   }
+		   return null;
 	}
 	
 
