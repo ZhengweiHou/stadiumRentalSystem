@@ -1,0 +1,32 @@
+/* 导航条部分 */
+.nav{width:960px;height:29px;text-align:left;margin:-13px auto 0;background:url("sp_nav.gif") repeat-x 0 -30px;position:relative;}
+.nav ul{margin-left:15%;}
+.nav ul li{float:left;width:auto;line-height:29px;display:inline;text-align:center;padding-left:5px;font-size:14px;font-weight:bold;background:url(/jscss/demoimg/201007/sp_nav.gif) no-repeat right -59px;}
+.nav ul li a{float:left;width:auto;color:#FFF;padding:0 20px;}
+.nav ul li.select{background:url("sp_nav.gif") no-repeat 0 -90px;position:relative;margin-top:-4px;}
+.nav ul li.select a{background:url("sp_nav.gif") no-repeat right -90px;height:33px;line-height:33px;color:#333;text-indent:-5px;}
+
+
+#listsp {
+	WIDTH: 99%
+}
+#listsp .sptd {
+	PADDING-TOP: 5px; BORDER-BOTTOM: #ccc 1px dotted
+}
+#listsp .pic {
+	PADDING-RIGHT: 1em; PADDING-LEFT: 5px; PADDING-BOTTOM: 0.5em; PADDING-TOP: 3px
+}
+#listsp .title {
+	PADDING-BOTTOM: 0.2em
+}
+#listsp .title A {
+	COLOR: #990000
+}
+#listsp .pic IMG {
+	BORDER-RIGHT: #333 1px solid; BORDER-TOP: #333 1px solid; BORDER-LEFT: #333 1px solid; BORDER-BOTTOM: #333 1px solid
+}
+#spshow .about {
+	COLOR: #990000
+}
+
+
