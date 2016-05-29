@@ -55,7 +55,7 @@
 
 
 <body text=#000000 leftMargin=0 topMargin=0 >
-	<div width="960" align=center topMargin=0 style="background-color: green;">
+	<div width="960" align=center topMargin=0 >
 		<h1>欢迎使用HZW体育馆场地租赁系统</h1>
 	</div>
 	<div id="indexWin"></div>
@@ -63,9 +63,9 @@
 	<div class="nav" align="center" topMargin=0>
 		<ul>
 			<li><a href="<%=basePath%>" name="navurl" target="">首 页</a></li>
-			<li><a href="<%=basePath%>" name="navurl" target="">场馆介绍</a></li>
-			<li><a href="<%=basePath%>" name="navurl" target="">新闻信息</a></li>
-			<li><a href="<%=basePath%>" name="navurl" target="">场地预定</a></li>
+			<%-- <li><a href="<%=basePath%>" name="navurl" target="">场馆介绍</a></li>
+			<li><a href="<%=basePath%>" name="navurl" target="">新闻信息</a></li> --%>
+			<li><a href="<%=basePath%>client/stadiumreservation.jsp" name="navurl" target="">场地预定</a></li>
 			<!-- <li><a href="admin/login.jsp" target="">管理员登陆</a></li>  -->
 			<li style="margin-left: 20%;">
 				<%

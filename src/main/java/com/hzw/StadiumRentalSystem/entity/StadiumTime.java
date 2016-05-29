@@ -49,7 +49,7 @@ public class StadiumTime implements Serializable {
 		return stadium;
 	}
 
-	@Column(name = "day", nullable = false, unique = true)
+	@Column(name = "day", nullable = false, unique = false)
 	public Timestamp getDay() {
 		return day;
 	}

@@ -91,5 +91,19 @@ public class StadiumDaoImpl extends BaseDao implements StadiumDao {
 		this.session().update(stadium);
 
 	}
+
+	@Override
+	public List<Stadium> getCanAvaliableStadium() {
+		// TODO Auto-generated method stub
+		 Criteria c=this.session().createCriteria(Stadium.class);
+		   c.add(Restrictions.eq("avaliable",0));//eq是等于，gt是大于，lt是小于,or是或
+		   List<Stadium> stadiums = c.list();
+		   if(stadiums==null||stadiums.size()<1){
+			   return null;
+					  
+		   }
+			   return stadiums;
+
+	}
 	
 }

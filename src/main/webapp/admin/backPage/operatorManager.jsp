@@ -148,20 +148,7 @@
 				});
 
 			}
-		}, {
-			text : 'Cut',
-			iconCls : 'icon-cut',
-			handler : function() {
-				$('#operatorGrid').
-				alert('cut')
-			}
-		}, '-', {
-			text : 'Save',
-			iconCls : 'icon-save',
-			handler : function() {
-				alert('save')
-			}
-		} ];
+		}];
 	</script>
 </body>
 

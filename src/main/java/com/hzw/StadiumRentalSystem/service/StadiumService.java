@@ -1,5 +1,6 @@
 package com.hzw.StadiumRentalSystem.service;
 
+import java.sql.Timestamp;
 import java.util.List;
 
 import com.hzw.StadiumRentalSystem.entity.Stadium;
@@ -52,4 +53,20 @@ public interface StadiumService {
 	 * @param id
 	 */
 	public void delById(Integer id);
+	
+	/**
+	 * 客户端查找可预订场地
+	 * @param startdt 开始时间
+	 * @param enddt 结束时间
+	 * @param startday 开始日期
+	 * @return
+	 */
+	public List<Stadium> clientFindStadiums(String startdt,String enddt,Timestamp startday);
+	
+	/**
+	 * 根据id获取运动场
+	 * @param id
+	 * @return
+	 */
+	public Stadium getStadiumById(int id);
 }

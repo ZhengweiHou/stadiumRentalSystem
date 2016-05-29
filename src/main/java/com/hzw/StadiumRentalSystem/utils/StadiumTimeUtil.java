@@ -1,12 +1,14 @@
 package com.hzw.StadiumRentalSystem.utils;
 
+import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 
 /**
  * 分时段操作工具
+ * 
  * @author HZW_922
- *
+ * 
  */
 public class StadiumTimeUtil {
 
@@ -43,6 +45,36 @@ public class StadiumTimeUtil {
 	}
 
 	/**
+	 * 根据连续时段开始和结束时间的下标生成时间表示数
+	 * 
+	 * @param indexOfStartdt
+	 * @param indexOfEnddt
+	 * @return
+	 */
+	public static int bothIndexToDecimal(int indexOfStartdt, int indexOfEnddt) {
+		int i = bitsToDecimal(bothIndexToBitsList(indexOfStartdt,indexOfEnddt));
+		return i;
+
+	}
+
+	/**
+	 * 根据连续时段开始和结束时间的下标,生成期间时段位数集合
+	 * 
+	 * @param indexOfStartdt
+	 * @param indexOfEnddt
+	 * @return
+	 */
+	public static List<Integer> bothIndexToBitsList(int indexOfStartdt,
+			int indexOfEnddt) {
+		List<Integer> list = new ArrayList<Integer>();
+
+		for (; indexOfStartdt <= indexOfEnddt; indexOfStartdt++) {
+			list.add(indexOfStartdt);
+		}
+		return list;
+	}
+
+	/**
 	 * 根据时间段key值集合，生成时间段标识数字 ----指定位数，生成相应二进制数的十进制的值,（二进制位数转换成十进制数）
 	 * 
 	 * @param list
@@ -61,8 +93,10 @@ public class StadiumTimeUtil {
 	/**
 	 * 判断所选时间段表示数在目标时间段表示数中是否有重复时间段 ----比较两个十进制数的二进制数为1的位是否有重复
 	 * 
-	 * @param beCompared	
+	 * @param beCompared
+	 *            大
 	 * @param compared
+	 *            小
 	 * @return 不重复返回false，重复返回true
 	 */
 	public static Boolean bitsIsRepeat(int beCompared, int compared) {
@@ -73,7 +107,7 @@ public class StadiumTimeUtil {
 	}
 
 	public static void main(String[] args) {
-		System.out.println(StadiumTimeUtil.bitsIsRepeat(16, 8));//10000  1000
-		System.out.println(StadiumTimeUtil.bitsIsRepeat(25, 5));//11001  101
+		System.out.println(StadiumTimeUtil.bitsIsRepeat(16, 8));// 10000 1000
+		System.out.println(StadiumTimeUtil.bitsIsRepeat(25, 5));// 11001 101
 	}
 }

@@ -36,8 +36,7 @@
 	<!-- 头部 -->
 	<div data-options="region:'north',border:false"
 		style="height: 60px; background: #B3DFDA; padding: 10px">
-		用户名【
-		<%=op.getName()%>】，角色【
+		用户名【<%=op.getName()%>】，角色【
 		<%=op.getRole().getName()%>】 <a href="javascript:void(0)"
 			onclick="logout()" class="easyui-linkbutton logoutBtn">logout</a>
 	</div>
@@ -45,7 +44,7 @@
 	<!-- 功能菜单 -->
 	<div data-options="region:'west',split:true" style="width: 200px;">
 		<div class="easyui-accordion" data-options="fit:true,border:false">
-			<div title="Title2">
+			<div title="管理导航">
 				<ul>
 					<li style="width: 90"><a href="#" class="easyui-linkbutton"
 						onclick="addTab('personalCenter')"
@@ -57,6 +56,9 @@
 						onclick="addTab('stadiumManager')"
 						data-options="toggle:true,group:'g1',plain:true">运动场管理</a></li>
 					<li style="width: 90"><a href="#" class="easyui-linkbutton"
+						onclick="addTab('orderManager')"
+						data-options="toggle:true,group:'g1',plain:true">订单管理</a></li>
+					<li style="width: 90"><a href="#" class="easyui-linkbutton"
 						onclick="addTab('memberManager')"
 						data-options="toggle:true,group:'g1',plain:true">会员管理</a></li>
 					<li style="width: 90"><a href="#" class="easyui-linkbutton"
@@ -65,14 +67,14 @@
 				</ul>
 
 			</div>
-			<div title="Title3" style="padding: 10px">content3</div>
+
 		</div>
 	</div>
 
 	<!-- 右侧副显示 -->
-	<div
+<!-- 	<div
 		data-options="region:'east',split:true,collapsed:true,title:'East'"
-		style="width: 100px; padding: 10px;">east region</div>
+		style="width: 100px; padding: 10px;">east region</div> -->
 
 	<!-- 页脚 -->
 	<div data-options="region:'south',border:false"

@@ -27,4 +27,11 @@ public interface StadiumDao extends GenericDao<Stadium, Integer> {
 	 * @return
 	 */
 	public void upDate(Stadium stadium);
+	
+	
+	/**
+	 * 获取可使用的场地
+	 * @return
+	 */
+	public List<Stadium> getCanAvaliableStadium();
 }

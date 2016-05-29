@@ -3,6 +3,7 @@ package com.hzw.StadiumRentalSystem.dao.impl;
 import java.util.List;
 
 import org.hibernate.Criteria;
+import org.hibernate.Query;
 import org.hibernate.criterion.Projections;
 import org.springframework.stereotype.Repository;
 
@@ -54,6 +55,23 @@ public class OrderDaoImpl extends BaseDao implements OrderDao{
 		c.setProjection(Projections.rowCount());
 		String a = c.uniqueResult().toString();
 		return Integer.parseInt(a);
+	}
+
+	@Override
+	public List<Order> getPagingList(int start, int number) {
+		Query q=this.session().createQuery("from Order"); //查询语句
+		q.setFirstResult(start);   //从第start条开始
+		q.setMaxResults(number);   //一共取number条
+//		q.setShort(name, val);// TODO 排序
+		List<Order> orders =q.list();
+		return orders;
+	}
+
+	@Override
+	public void updateOrder(Order order) {
+		// TODO Auto-generated method stub
+		this.session().update(order);
+		
 	}
 
 

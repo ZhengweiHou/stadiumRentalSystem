@@ -41,11 +41,15 @@ public class Order implements Serializable {
 	
 	private Timestamp createTime;// 订单创建时间
 	
-	private Timestamp startTime;// 运动开始时间
+	private Timestamp destineDay;// 预定日期
 	
+	private String startTime;// 运动开始时间
+	
+	private String endTime;// 运动结束时间	
+
 	private Integer useTimeState; // 时间段标识数
 	
-	private String state;// 订单状态
+	private String state = "C";// 订单状态
 	
 	private double rebate=1;// 折扣
 	
@@ -53,7 +57,7 @@ public class Order implements Serializable {
 	
 	private double total;// 总价
 	
-	private Integer totalTime;// 总时间
+	private double totalTime;// 总时间
 	
 
 
@@ -84,8 +88,13 @@ public class Order implements Serializable {
 	}
 
 	@Column(name = "startTime", unique = false, nullable = false)
-	public Timestamp getStartTime() {
+	public String getStartTime() {
 		return startTime;
+	}
+	
+	@Column(name = "endTime", unique = false, nullable = false)
+	public String getEndTime() {
+		return endTime;
 	}
 
 	@Column(name = "useTimeState", unique = false, nullable = false)
@@ -114,9 +123,16 @@ public class Order implements Serializable {
 	}
 
 	@Column(name = "totalTime", unique = false, nullable = false)
-	public Integer getTotalTime() {
+	public double getTotalTime() {
 		return totalTime;
 	}
+	
+	@Column(name = "destineDay", unique = false, nullable = false)
+	public Timestamp getDestineDay() {
+		return destineDay;
+	}
+	
+
 	
 	public void setId(Integer id) {
 		this.id = id;
@@ -134,7 +150,7 @@ public class Order implements Serializable {
 		this.createTime = createTime;
 	}
 
-	public void setStartTime(Timestamp startTime) {
+	public void setStartTime(String startTime) {
 		this.startTime = startTime;
 	}
 
@@ -158,9 +174,15 @@ public class Order implements Serializable {
 		this.total = total;
 	}
 	
-	public void setTotalTime(Integer totalTime) {
+	public void setTotalTime(double totalTime) {
 		this.totalTime = totalTime;
 	}
 
+	public void setDestineDay(Timestamp destineDay) {
+		this.destineDay = destineDay;
+	}
 	
+	public void setEndTime(String endTime) {
+		this.endTime = endTime;
+	}
 }

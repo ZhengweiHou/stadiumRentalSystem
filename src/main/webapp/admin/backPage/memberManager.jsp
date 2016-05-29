@@ -41,7 +41,6 @@
 			,singleSelect:true
 			,method:'get'
 			,url:'member!showMembers.action'
-			,toolbar:toolbar
 			,onRowContextMenu:showRowContextMenu
 			,striped:true
 			,sortName:'id'
