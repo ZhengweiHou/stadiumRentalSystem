@@ -14,7 +14,8 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <link href="<%=basePath%>images/css.css" type=text/css rel=stylesheet>
-<link href="<%=basePath%>images/default.css" type=text/css rel=stylesheet>
+<link href="<%=basePath%>images/default.css" type=text/css
+	rel=stylesheet>
 
 <link rel="stylesheet" type="text/css"
 	href="<%=basePath%>easyui/themes/default/easyui.css">
@@ -54,8 +55,8 @@
 </head>
 
 
-<body text=#000000 leftMargin=0 topMargin=0 >
-	<div width="960" align=center topMargin=0 >
+<body text=#000000 leftMargin=0 topMargin=0>
+	<div width="960" align=center topMargin=0>
 		<h1>欢迎使用HZW体育馆场地租赁系统</h1>
 	</div>
 	<div id="indexWin"></div>
@@ -65,19 +66,30 @@
 			<li><a href="<%=basePath%>" name="navurl" target="">首 页</a></li>
 			<%-- <li><a href="<%=basePath%>" name="navurl" target="">场馆介绍</a></li>
 			<li><a href="<%=basePath%>" name="navurl" target="">新闻信息</a></li> --%>
-			<li><a href="<%=basePath%>client/stadiumreservation.jsp" name="navurl" target="">场地预定</a></li>
+			<li><a href="<%=basePath%>client/stadiumreservation.jsp"
+				name="navurl" target="">场地预定</a></li>
+			<%
+				Member member = (Member) session.getAttribute("member");
+				if (member != null) {
+			%>
+			<li><a href="<%=basePath%>client/mOrder.jsp"
+				name="navurl" target="">个人订单</a></li>
+			<%
+				}
+			%>
 			<!-- <li><a href="admin/login.jsp" target="">管理员登陆</a></li>  -->
 			<li style="margin-left: 20%;">
 				<%
-					Member member =  (Member)session.getAttribute("member");
 					if (member == null) {
-				%> 
-					<a style="color: red;" href="javascript:void(0)" onclick="loginWin()" target="">未登录</a>
-				<%} else {%> 
-					<a style="color: blue;" href="javascript:void(0)" target="">用户<%=member.getAccount()%>已登录 </a>
-					<a style="color: red;" href="javascript:void(0)" onclick="logout()" target="">注销 </a>
-					
-				<%}%>
+				%> <a style="color: red;" href="javascript:void(0)"
+				onclick="loginWin()" target="">未登录</a> <%
+ 	} else {
+ %> <a
+				style="color: blue;" href="javascript:void(0)" target="">用户<%=member.getAccount()%>已登录
+			</a> <a style="color: red;" href="javascript:void(0)" onclick="logout()"
+				target="">注销 </a> <%
+ 	}
+ %>
 			</li>
 
 		</ul>
@@ -124,15 +136,15 @@
 	    					 location.href="<%=bas%>";
 	    				 }else if(data.result=="0"){
 	    					 location.href="<%=bas%>";
-	    					 alert(data.msg);
-	    					 
-	    				 }
-	    			}
-	    		}); 
-	        }  
-	    }); 
-	}
-	
+								alert(data.msg);
+
+							}
+						}
+					});
+				}
+			});
+		}
+
 		function nav() {
 			var url = document.URL;
 			var urls = document.getElementsByName("navurl");
@@ -157,6 +169,4 @@
 			}
 			$(a2[0]).parent().addClass("select");
 		});
-		
-		
 	</script>
